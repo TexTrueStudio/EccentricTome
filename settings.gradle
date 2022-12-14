@@ -1,20 +1,10 @@
 pluginManagement {
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.toString() == 'org.spongepowered.mixin') {
-                useModule "org.spongepowered:mixingradle:${requested.version}"
-            }
-        }
-    }
     repositories {
         maven {
-            name 'Forge'
-            url 'https://maven.minecraftforge.net'
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
         }
-        maven {
-            name 'Sponge / Mixin'
-            url 'https://repo.spongepowered.org/maven'
-        }
+        mavenCentral()
         gradlePluginPortal()
     }
 }
